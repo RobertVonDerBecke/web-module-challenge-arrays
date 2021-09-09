@@ -86,7 +86,6 @@ function addFlavor(arr, newFlav) {
 
 }
 addFlavor(originalFlavors, "Rainbow Sherbert")
-console.log(originalFlavors)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -162,12 +161,11 @@ Use the filterByWord function below to do the following:
 
 function filterByWord(arr, str) {
 	let newArr = [];
-	for(let i = 0; i < arr.length+1; i++ ){
-		if(arr.includes(str)){
+	for(let i = 0; i < arr.length; i++ ){
+		if(arr[i].includes(str)){
 			newArr.push(arr[i])
 			console.log(arr[i])
 		}
-
 	}
 	return newArr
 }
