@@ -114,8 +114,8 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/) {
-	/*your code here*/
+function getFlavorByIndex(arr, num) {
+	return arr[num]
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -133,10 +133,13 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/) {
-	/*your code here*/
-}
+function removeFlavorByName(arr, flav) {
+	let index = arr.indexOf(flav);
+	arr.splice(index, 1)
+	return arr
 
+} 
+removeFlavorByName(originalFlavors, "Rocky Road")
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
 Your task is to write a function that checks every item in the array for a string and returns a new array called filteredArray with only the values 
@@ -157,10 +160,18 @@ Use the filterByWord function below to do the following:
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/) {
-	/*your code here*/
-}
+function filterByWord(arr, str) {
+	let newArr = [];
+	for(let i = 0; i < arr.length+1; i++ ){
+		if(arr.includes(str)){
+			newArr.push(arr[i])
+			console.log(arr[i])
+		}
 
+	}
+	return newArr
+}
+filterByWord(originalFlavors, "Chocolate")
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/
 
 /* STRETCH 1: Write a function that returns the average number of words in an array. You should be able to use this function for any array, but can test with originalFlavors.
